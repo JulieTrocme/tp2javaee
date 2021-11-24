@@ -5,6 +5,7 @@
                 template="./layout_login.xhtml"
                 xmlns:p="http://primefaces.org/ui">
     <ui:define name="content">
+        <p:growl/>
         <h:panelGrid columns="1" style="margin: 0 auto;">
             <p:panel header="#{msg['app.loginform']}">
                 <h:form onsubmit="action = 'j_security_check';" 
@@ -17,9 +18,8 @@
                         <p:password id="j_password"/>
                         <p:spacer/>
                         <p:commandButton value="#{msg['app.login']}"
-                                         ajax="false"
-                                         icon="fa fa-sign-in"/>
-                        <p:linkButton outcome="signin" value="#{msg['app.signin']}"/>
+                                         ajax="false"/>
+                        <p:linkButton outcome="signin" value="#{msg['app.signinform']}"/>
                     </h:panelGrid>
                 </h:form>
             </p:panel>
